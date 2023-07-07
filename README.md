@@ -2,7 +2,7 @@
 
 ## Issue
 
-When using `@swc-node/register` with programmatic options, no supplied options are not applied.
+When using `@swc-node/register` with programmatic options, no supplied options are applied.
 
 ## Repro
 
