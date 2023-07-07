@@ -2,12 +2,12 @@
 
 ## Issue
 
-When using `@swc-node/register` with programmatic options, the options are not applied.
+When using `@swc-node/register` with programmatic options, no supplied options are not applied.
 
 ## Repro
 
 - Observe the contents of `tsconfig.json`, and note that `experimentalDecorators` is set to `false`.
-- Examine the contents of `test.ts` and note the explicit usage of decorators.
+- Examine the contents of `test.ts` and note the explicit usage of _legacy_ decorators.
 - See `index.js` for the programmatic usage of `@swc-node/register`, and note that `experimentalDecorators` is set to `true` in the call to `register`.
 
   - As is, `@swc-node/register` will not apply the programmatically supplied `options` passed to `register`, but will instead use the values from `tsconfig.json`. This will cause the compilation to fail.
