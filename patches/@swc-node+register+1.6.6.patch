@@ -7,7 +7,7 @@ index 7d4cfd8..750e1b2 100644
  function register(options = {}, hookOpts = {}) {
      if (!process.env.SWCRC) {
 -        options = (0, read_default_tsconfig_1.readDefaultTsConfig)();
-+        options = Object.keys(options) ? options : (0, read_default_tsconfig_1.readDefaultTsConfig)();
++        options = Object.keys(options).length ? options : (0, read_default_tsconfig_1.readDefaultTsConfig)();
      }
      options.module = ts.ModuleKind.CommonJS;
      (0, sourcemap_support_1.installSourceMapSupport)();
